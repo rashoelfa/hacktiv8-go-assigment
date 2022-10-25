@@ -1,0 +1,595 @@
+{
+	"info": {
+		"_postman_id": "39c1ed47-51ac-4c9a-a98d-f8bf50f26d3d",
+		"name": "Hacktiv8-go",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23974555"
+	},
+	"item": [
+		{
+			"name": "Assigment 2",
+			"item": [
+				{
+					"name": "All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/order",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Order by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/order/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Tom asdasdasdasd\",\r\n    \"items\": [\r\n        {\r\n            \"itemCode\": \"1233\",\r\n            \"description\": \"Iphone 10X\",\r\n            \"quantity\": 1\r\n        },\r\n        {\r\n            \"itemCode\": \"1233\",\r\n            \"description\": \"Iphone 122222X\",\r\n            \"quantity\": 133\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/order",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerName\": \"Tom hehe\",\r\n    \"items\": [\r\n        {\r\n            \"itemCode\": \"1233\",\r\n            \"description\": \"Iph55one 10X\",\r\n            \"quantity\": 17654\r\n        },\r\n        {\r\n            \"itemCode\": \"1233\",\r\n            \"description\": \"Iphone X\",\r\n            \"quantity\": 1344\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/order/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/order/1",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Assigment 3",
+			"item": [
+				{
+					"name": "Get UI",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get JSON",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/json",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Final Project",
+			"item": [
+				{
+					"name": "Users",
+					"item": [
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"age\":12,\r\n    \"email\": \"test@asd.com\",\r\n    \"password\":\"123456\",\r\n    \"username\":\"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/register",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\":\"123456\",\r\n    \"username\":\"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users/login",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Bearer",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7IklEIjoyNCwiQ3JlYXRlZEF0IjoiMjAyMi0xMC0yM1QxMjo1NDo1NS4xOTgzOTErMDc6MDAiLCJVcGRhdGVkQXQiOiIyMDIyLTEwLTIzVDEyOjU0OjU1LjE5ODM5MSswNzowMCIsIkRlbGV0ZWRBdCI6bnVsbCwiVXNlcm5hbWUiOiJ0ZXN0IiwiRW1haWwiOiJ0ZXN0QGFzZC5jb20iLCJQYXNzd29yZCI6IiQyYSQxMCRBS3IzQnRHVUNMTjZlbmxmeGs3MkZPQmFBdlM5VS95L2RPNXVUcGJnRWZwZlF5cDZVYUxaeSIsIkFnZSI6MTJ9LCJleHAiOjE2NjY1MDgyNjV9.iwz1iKjclG0PTETNNXY86WsKweRbTL5wmu-rV8eSaPI",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test@gmail.com\",\r\n    \"username\":\"test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/users",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"users"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Photos",
+					"item": [
+						{
+							"name": "Add Photo",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"foto kucing\",\r\n    \"caption\":\"ini adalah foto kucing\",\r\n    \"photo_url\":\"https://d1hjkbq40fs2x4.cloudfront.net/2016-07-16/files/cat-sample_1313.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/photos",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Photos",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Photo",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"title\":\"foto kucing\",\r\n    \"caption\":\"ini adalah foto kucing\",\r\n    \"photo_url\":\"https://d1hjkbq40fs2x4.cloudfront.net/2016-07-16/files/cat-sample_1313.jpg\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/photos/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Photo",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/photos/11",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"photos",
+										"11"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Comments",
+					"item": [
+						{
+							"name": "Create Comment",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\":\"test abc\",\r\n    \"photo_id\":1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/comments",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Comments",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/comments",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Comment",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"message\":\"Hello World\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/comments/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Comment",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/comments/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"comments",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Social Media",
+					"item": [
+						{
+							"name": "Create Social Media",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"instagram\",\r\n    \"social_media_url\":\"https://instagram.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/socialmedias",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"socialmedias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "All Social Medias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/socialmedias",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"socialmedias"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Edit Social Media",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"instagrams\",\r\n    \"social_media_url\":\"https://instagram.coms\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{BASE_URL}}/socialmedias/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"socialmedias",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Social Media",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{BASE_URL}}/socialmedias/1",
+									"host": [
+										"{{BASE_URL}}"
+									],
+									"path": [
+										"socialmedias",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RAYXNkLmNvbSIsImV4cCI6MTY2NjcwNTgxNiwiaWQiOjF9.S2Fev2zrpJUy9Dnb_Ygb-iPYt-8KzMZm3Lh_Uvcskhs",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://127.0.0.1:8080",
+			"type": "string"
+		}
+	]
+}
